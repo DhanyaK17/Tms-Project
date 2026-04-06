@@ -1,0 +1,209 @@
+/* UserPage.css - Professional Management */
+.user-page {
+  min-height: 100vh;
+  padding-left: var(--sidebar-w);
+  transition: padding-left 0.3s ease;
+}
+
+.user-page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.user-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.user-page-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.primary-action-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.primary-action-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* User Form - High Contrast Design */
+.user-form-card {
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid var(--border-soft);
+  border-radius: 24px;
+  padding: 3.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.form-group-item label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+}
+
+.form-group-item input,
+.form-group-item select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: #FFFFFF;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.form-group-item input:focus,
+.form-group-item select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #FFFFFF;
+}
+
+/* User Management Table */
+.user-table-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  width: 100%;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th {
+  padding: 1rem 1.75rem;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.01);
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.user-table td {
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 0.95rem;
+}
+
+.user-table tr:hover td {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.edit-action-btn,
+.delete-action-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  text-transform: uppercase;
+}
+
+.edit-action-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border-color: var(--border-soft);
+}
+
+.edit-action-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.delete-action-btn {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  margin-left: 0.5rem;
+}
+
+.delete-action-btn:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+.role-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 750;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.role-badge.superadmin {
+  background: rgba(235, 76, 76, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(235, 76, 76, 0.2);
+}
+
+@media (max-width: 768px) {
+  .user-page {
+    padding-left: 0;
+    padding-bottom: 70px;
+  }
+
+  .user-page-container {
+    padding: 1.5rem;
+  }
+
+  .user-page-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .user-form-card {
+    padding: 1.5rem;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

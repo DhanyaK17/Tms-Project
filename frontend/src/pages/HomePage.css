@@ -1,0 +1,219 @@
+/* HomePage.css - Professional Enterprise Layout */
+.home-page {
+  min-height: 100vh;
+  padding-left: var(--sidebar-w);
+  transition: padding-left 0.3s ease;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+  animation: pageIn 0.6s ease-out;
+}
+
+/* Page Header */
+.hero-section {
+  margin-bottom: var(--space-xl);
+}
+
+.brand-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: rgba(235, 76, 76, 0.08);
+  border: 1px solid rgba(235, 76, 76, 0.2);
+  border-radius: 999px;
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.home-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.home-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* User Profile Card - Professional */
+.user-welcome-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow line removed */
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.avatar-placeholder {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary), #D63D3D);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 800;
+}
+
+.user-details h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.role-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(235, 76, 76, 0.08);
+  border: 1px solid rgba(235, 76, 76, 0.2);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.role-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+/* Quick Navigation Grid */
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.section-label {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.quick-links-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.quick-link-card {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--border-soft);
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: var(--transition);
+}
+
+.quick-link-card:hover {
+  background: rgba(235, 76, 76, 0.05);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.link-icon {
+  width: 50px;
+  height: 50px;
+  background: #111;
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.quick-link-card:hover .link-icon {
+  background: var(--primary);
+  color: #fff;
+}
+
+.link-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Empty State / CTA */
+.login-message {
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+}
+
+.login-btn-large {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.login-btn-large:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .home-page {
+    padding-left: 0;
+    padding-bottom: 80px;
+  }
+
+  .user-welcome-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quick-links-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

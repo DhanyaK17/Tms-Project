@@ -1,0 +1,229 @@
+/* ComplaintsDashboardPage.css - Professional Admin Dashboard */
+.complaints-dashboard {
+  min-height: 100vh;
+  padding-left: var(--sidebar-w);
+  transition: padding-left 0.3s ease;
+}
+
+.dashboard-rail {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.dashboard-hero h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-hero p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Administrative Stats Grid - High Fidelity */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.admin-stat-card {
+  background: #050505;
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.admin-stat-card:hover {
+  border-color: var(--stat-color);
+  transform: translateY(-2px);
+}
+
+/* Glow removed */
+
+.admin-stat-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--stat-color, var(--primary));
+  opacity: 1;
+}
+
+.admin-stat-card .stat-value {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, #bbb);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.admin-stat-card .stat-label {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Professional Admin Data Table - Registry Style */
+.admin-table-container {
+  background: #050505;
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.admin-action-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+}
+
+.btn-assign {
+  background: rgba(235, 76, 76, 0.1);
+  color: var(--primary);
+  border-color: rgba(235, 76, 76, 0.2);
+}
+
+.btn-assign:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-done {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.btn-done:hover {
+  background: #10B981;
+  color: #fff;
+}
+
+.assign-mini-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.mini-select {
+  padding: 0.45rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 4px;
+  background: #FFFFFF;
+  border: 1px solid #ddd;
+  color: #000000;
+  transition: var(--transition);
+}
+
+.mini-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #FFFFFF;
+}
+
+/* Details Panel - Sleek & Professional */
+.complaint-details-glass {
+  background: #0D0D0D;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-top: 2rem;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.details-header h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.close-details-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-soft);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.close-details-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.details-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.info-content {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .complaints-dashboard {
+    padding-left: 0;
+    padding-bottom: 70px;
+  }
+
+  .dashboard-rail {
+    padding: 1.5rem;
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

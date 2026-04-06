@@ -1,0 +1,205 @@
+/* MasterScreen.css - Professional Management Utility */
+.master-screen {
+  min-height: 100vh;
+  padding-left: var(--sidebar-w);
+  transition: padding-left 0.3s ease;
+}
+
+.screen-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Master Header */
+.screen-header-rail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-soft);
+  position: relative;
+}
+
+.screen-header-rail::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: var(--primary);
+}
+
+.screen-header-rail h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 30%, #999 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+/* Management Form - High Contrast Design */
+.master-form-glass {
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid var(--border-soft);
+  border-radius: 24px;
+  padding: 3.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: #FFFFFF;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Professional Results Table - Registry Style */
+.master-table-card {
+  background: #050505;
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.table-action-header {
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.01);
+  border-bottom: 1px solid var(--border-soft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-action-header h3 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.standard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.standard-table thead th {
+  padding: 1.25rem 2rem;
+  background: rgba(255, 255, 255, 0.01);
+  border-bottom: 1px solid var(--border-soft);
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.standard-table tbody td {
+  padding: 1.5rem 2rem;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.standard-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.btn-icon-only {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1.1rem;
+}
+
+.btn-icon-only:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.action-btn-group {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.btn-delete-icon:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .master-screen {
+    padding-left: 0;
+    padding-bottom: 70px;
+  }
+
+  .screen-header-rail {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .master-form-glass {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,230 @@
+/* UserComplaintDashboardPage.css - Professional Enterprise Analytics */
+.user-complaint-dashboard {
+  min-height: 100vh;
+  padding-left: var(--sidebar-w);
+  transition: padding-left 0.3s ease;
+}
+
+.dashboard-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Dashboard Header */
+.page-hero-header {
+  margin-bottom: var(--space-sm);
+}
+
+.page-hero-header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.page-hero-header p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Stats Dashboard */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  border-color: var(--stat-color);
+  background: rgba(255, 255, 255, 0.01);
+  transform: translateY(-4px);
+}
+
+.stat-value {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* stat-glow removed */
+
+/* Details Panel - Sleek & Professional */
+.complaint-details-glass {
+  background: #0D0D0D;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.details-header h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.close-details-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-soft);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.close-details-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.details-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.info-content {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Enterprise Data Table */
+.data-table-container {
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.table-header-row {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.table-header-row h3 {
+  font-size: 1.15rem;
+}
+
+.reset-filter-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reset-filter-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.standard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.standard-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.01);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.standard-table td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 0.95rem;
+}
+
+.standard-table tr:hover td {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.status-tag {
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .user-complaint-dashboard {
+    padding-left: 0;
+    padding-bottom: 70px;
+  }
+
+  .dashboard-content {
+    padding: 1.5rem;
+  }
+
+  .table-header-row {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
