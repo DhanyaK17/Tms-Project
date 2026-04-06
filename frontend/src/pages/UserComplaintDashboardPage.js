@@ -52,7 +52,7 @@ const UserComplaintDashboardPage = () => {
     } finally {
       setLoading(false);
     }
-  }, [user]);
+  }, []);
 
   useEffect(() => {
     loadData();
